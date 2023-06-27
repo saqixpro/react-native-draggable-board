@@ -2,8 +2,9 @@ import React from 'react';
 
 import {
   View,
-  ListView
 } from 'react-native';
+
+import ListView from 'deprecated-react-native-listview'
 
 class Column extends React.Component {
   constructor(props) {
@@ -144,7 +145,7 @@ class Column extends React.Component {
           scrollEnabled={!this.props.movingMode}
           onContentSizeChange={this.onContentSizeChange.bind(this)}
           enableEmptySections={true}
-         />
+        />
       </View>
     );
   }
