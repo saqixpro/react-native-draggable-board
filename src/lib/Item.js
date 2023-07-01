@@ -72,15 +72,15 @@ class Item {
     ref && ref.measure && ref.measure((fx, fy, width, height, px, py) => {
       const layout = { x: px, y: py, width: width, height: height };
       this.setLayout(layout);
-      if (!this.isVisible() && layout.x && layout.y && layout.width && layout.height) {
+      if (!this.isVisible() && layout?.x && layout?.y && layout?.width && layout?.height) {
         this.setVisible(true);
-      } else if (this.isVisible() && !layout.x && !layout.y && !layout.width && !layout.height) {
+      } else if (this.isVisible() && !layout?.x && !layout?.y && !layout?.width && !layout?.height) {
         this.setVisible(false);
       }
       if (this.isLocked()) {
         this.setVisible(false);
       }
-      if (previousItem && previousItem.layout().y > layout.y) {
+      if (previousItem && previousItem.layout().y > layout?.y) {
         this.setVisible(false);
       }
     });
