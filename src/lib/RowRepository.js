@@ -41,7 +41,7 @@ class RowRepository {
   }
 
   notify(columnId, event) {
-    this.listeners[columnId][event]();
+    this.listeners?.[columnId]?.[event]?.();
   }
 
   setScrollOffset(columnId, scrollOffset) {
