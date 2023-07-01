@@ -62,7 +62,7 @@ class Mover {
       visibleItems[i].setLayout(Object.assign({}, visibleItems[i + 1].layout()));
     }
     const lastItem = visibleItems[visibleItems.length - 1];
-    const lastLayout = lastItem.layout() ?? { x: 0, y: 0, width: 0, height: 0 };
+    const lastLayout = lastItem.layout() ?? { x: 0, y: 0, width: 260, height: 60 };
     const newLastY = lastLayout.y + lastLayout.height;
     lastItem.setLayout(Object.assign(lastLayout, { y: newLastY }));
 

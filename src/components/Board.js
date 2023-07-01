@@ -223,7 +223,7 @@ class Board extends React.Component {
       outputRange: [`-${this.MAX_DEG}deg`, '0deg', `${this.MAX_DEG}deg`]
     });
     return {
-      transform: [{rotate: interpolatedRotateAnimation}],
+      transform: [{ rotate: interpolatedRotateAnimation }],
       position: 'absolute',
       zIndex: zIndex,
       top: this.state.y - this.TRESHOLD,
