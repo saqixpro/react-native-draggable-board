@@ -63,7 +63,7 @@ class Mover {
     }
     const lastItem = visibleItems[visibleItems.length - 1];
     const lastLayout = lastItem.layout();
-    const newLastY = lastlayout?.y + lastlayout?.height;
+    const newLastY = lastLayout.y + lastLayout.height;
     lastItem.setLayout(Object.assign(lastLayout, { y: newLastY }));
 
     const column = registry.column(toColumnId);
